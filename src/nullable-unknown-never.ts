@@ -23,4 +23,18 @@ function throwError(): never {
   throw new Error("Something went wrong!");
 }
 
-const myNever: never = throwError(); // this variable will never be assigned a value
+// const myNever: never = throwError(); // this variable will never be assigned a value
+
+// What is the output of the following code?
+
+function generateAdder(a: number): (b: number) => number {
+  return function (b: number) {
+    return a + b;
+  };
+}
+
+const addTwo = generateAdder(2);
+
+console.log(addTwo(30));
+
+console.log(addTwo(5));
