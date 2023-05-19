@@ -1,12 +1,12 @@
 // arrow functions in generic
 
-// Function that takes a string parameter and returns an array of strings
+//* Function that takes a string parameter and returns an array of strings
 const createArray = (param: string): Array<string> => {
   // Creates an array with the given parameter as its only element
   return [param];
 };
 
-// Function that takes a generic parameter 't' and returns an array of that type
+//* Function that takes a generic parameter 't' and returns an array of that type
 const createGenericArray = <T>(param: T): T[] => {
   // Creates an array with the given parameter as its only element
   return [param];
@@ -57,7 +57,7 @@ const resultArray8 = createGenericTupleArray<User, Array<string>>(
 // Printing the result of the above invocation
 console.log({ resultArray8 });
 
-// Function that takes two generic parameters 'x' and 'y' and returns an object by spreading the properties of the given parameters
+//* Function that takes two generic parameters 'x' and 'y' and returns an object by spreading the properties of the given parameters
 const createGenericArrayWithSpread = <X, Y>(param1: X, param2: Y) => {
   // Combines the properties of param1 and param2 into a single object
   return { ...param1, ...param2 };
