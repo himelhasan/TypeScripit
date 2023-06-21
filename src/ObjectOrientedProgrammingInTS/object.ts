@@ -10,6 +10,7 @@ class Animal {
     this.sounds = sounds;
   }
 
+  // method =>
   makeSound() {
     console.log(`THE ${this.name} says ${this.sounds}`);
   }
