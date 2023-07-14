@@ -113,3 +113,17 @@ const maxMinFinder = (...numbers) => {
     return [max, min];
 };
 console.log(maxMinFinder(...numbers));
+// ** Create a TypeScript program that declares a function that takes a string parameter with a literal type of
+// "red", "green", or "blue", and an optional boolean parameter.If the boolean parameter is true, log the
+// string parameter in uppercase. If the boolean parameter is false or not provided, log the string parameter in lowercase.
+const logColors = (colour, toUpperCase) => {
+    if (toUpperCase) {
+        console.log(colour.toUpperCase());
+    }
+    else {
+        console.log(colour.toLowerCase());
+    }
+};
+logColors("green", true);
+logColors("blue", false);
+logColors("blue");
