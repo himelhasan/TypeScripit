@@ -62,3 +62,47 @@ const searchProduct = (products, criterion, value) => {
 };
 const searchedProduct = searchProduct(products, "category", "Category A");
 console.log(searchedProduct);
+const arrayOfProductTuples = [
+    ["Product 1", 9.99, 2],
+    ["Product 2", 19.99, 3],
+    ["Product 3", 14.99, 1],
+    ["Product 4", 24.99, 5],
+];
+const totalPriceOfProductTuples = (products) => {
+    let totalCost = 0;
+    for (const [name, price, quantity] of products) {
+        totalCost = totalCost + price * quantity;
+    }
+    return totalCost;
+};
+console.log(totalPriceOfProductTuples(arrayOfProductTuples));
+const ourNumberArray = [1, 2, 3, 4, 5, 6, 7, 8];
+const sumOfEvenNumbers = (numbers) => {
+    let numbs = [];
+    let sum = 0;
+    const numbersToSum = numbers.map((num) => {
+        if (num % 2 === 0) {
+            sum += num;
+            numbs.push(num);
+        }
+    });
+    console.log(numbs);
+    // numbs.map((num) => (sum = sum + num));
+    return sum;
+};
+console.log("total", sumOfEvenNumbers([1, 2, 3, 4, 5, 6, 7, 8]));
+const persons = [
+    { name: "John", age: 25, email: "john@example.com" },
+    { name: "Alice", age: 30, email: "alice@example.com" },
+    { name: "Bob", age: 28, email: "bob@example.com" },
+];
+const findPersonByEmail = (users, email) => {
+    const result = users.find((user) => user.email === email);
+    return result || null;
+};
+const emailToFind = "alice@example.com";
+const personToCheck = findPersonByEmail(persons, emailToFind);
+console.log(personToCheck); // Output: { name: "Alice", age: 30, email: "alice@example.com" }
+// ** Create a TypeScript program that declares an array of numbers. Use the spread operator to pass the elements
+//of the array as arguments to a function that finds the minimum and maximum values of the array.Use destructuring
+// to assign the minimum and maximum values to separate variables, and log them to the console.
