@@ -57,7 +57,7 @@ interface wifeInterface {
   age: number;
 }
 
-const crush6: CrushInterface<{ name: string; age: number }, object> = {
+const crush6: CrushInterface<{ name: string; age: number }, wifeInterface> = {
   name: "Mira",
   husband: { name: "Himel", age: 28 },
   wife: { name: "Adiba", age: 18 },

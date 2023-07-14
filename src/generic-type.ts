@@ -20,7 +20,7 @@ const studentWithNameAndRoll: Array<{ name: string; roll: number }> = [
   },
 ]; // Array of objects with name and roll properties
 
-// Declaring generic array
+// ** Declaring generic array
 
 // Defining a generic array type using a single parameter
 type GenericNumberArray<T> = Array<T>;

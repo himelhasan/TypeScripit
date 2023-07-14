@@ -7,10 +7,11 @@ type carType = {
 type newCarType = "name" | "model" | "year";
 type newCarTypeKeyOf = keyof carType;
 
-const a: newCarType = "model";
-const d: newCarTypeKeyOf = "name";
-const b: newCarTypeKeyOf = "year";
-const c: newCarTypeKeyOf = "model";
+const a: newCarType = "name";
+const b: newCarTypeKeyOf = "model";
+const c: newCarTypeKeyOf = "name";
+const d: newCarTypeKeyOf = "year";
+const e: keyof carType = "year";
 
 console.log(a);
 
